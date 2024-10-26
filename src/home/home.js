@@ -2,19 +2,26 @@ import { Text, View, StyleSheet, Image, ImageBackground, TouchableOpacity } from
 
 const Home = () => {
     return (
-        <ImageBackground style={estilo.fundo} source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaQ7PSbLfsn-DuI2YTo7K1L1s2o5MpxURkCw&s' }} >
+        <ImageBackground 
+        style={estilo.fundo}
+        source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaQ7PSbLfsn-DuI2YTo7K1L1s2o5MpxURkCw&s' }} >
+            
             <View style={estilo.tela}>
 
-                <TouchableOpacity style={estilo.tela}>
-                    <Image style={estilo.image} source={{
-                        uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc1ryw139eeE7PfK_CY_IT5MJwfNJfaWXkKg&s'
-                    }}
+            
+                <View style={estilo.botao}>
 
-                    />
+                    <TouchableOpacity style={estilo.tela}>
+                        <Image style={estilo.image}
+                        source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc1ryw139eeE7PfK_CY_IT5MJwfNJfaWXkKg&s'}} />
+                        <Text style={estilo.texto}>
+                            Tradutor de linguagem Juridicas
+                        </Text>
+                    </TouchableOpacity>
 
-                    <Text style={{ color: '#fff', marginTop: 10, fontSize: 24 }}>Tradutor de linguagem Juridicas</Text>
-                </TouchableOpacity>
+                </View>
             </View>
+
         </ImageBackground>
     );
 }
@@ -23,7 +30,8 @@ const estilo = StyleSheet.create({
     tela: {
         flex: 1,
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+
     },
     image: {
         width: 100,
@@ -35,7 +43,20 @@ const estilo = StyleSheet.create({
         flex: 1,
         resizeMode: 'cover',
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        width: "100%"
+    },
+    texto:{
+        color: '#fff',
+        marginTop: 10,
+        fontSize: 24
+    },
+    botao:{
+        flex: 1,
+        justifyContent:"center",
+        alignItems:"center",
+    
+        padding: 50
     }
 
 })

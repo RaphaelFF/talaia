@@ -2,7 +2,7 @@ import {Text, View, StyleSheet} from "react-native"
 
 export default function Home3(){
     return(
-        <View>
+        <View style ={estilo.container}>
             <Text>
                 Minha home 3
             </Text>
