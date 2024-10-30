@@ -1,6 +1,9 @@
-import { Text, View, StyleSheet, Image, ImageBackground, TouchableOpacity } from "react-native";
+import { Text, Alert, View, StyleSheet, Image, ImageBackground, TouchableOpacity } from "react-native";
 
 const Home = () => {
+    const clic = () => {
+        Alert.alert("Butão clicado");
+    }
     return (
         <ImageBackground 
         style={estilo.fundo}
@@ -11,7 +14,7 @@ const Home = () => {
             
                 <View style={estilo.botao}>
 
-                    <TouchableOpacity style={estilo.tela}>
+                    <TouchableOpacity style={estilo.tela} onPress={clic} >
                         <Image style={estilo.image}
                         source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc1ryw139eeE7PfK_CY_IT5MJwfNJfaWXkKg&s'}} />
                         <Text style={estilo.texto}>
